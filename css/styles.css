@@ -1,4 +1,4 @@
-#toppingsOnPizza, #review {
+#toppingsOnPizza, #review, #pizzaSize {
   display: none;
 }
 
@@ -6,7 +6,11 @@
 
 }
 
-form {
+form, #review {
   width: 500px;
   margin: 0 auto;
+}
+
+form {
+  padding: 10%;
 }

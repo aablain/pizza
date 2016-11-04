@@ -33,6 +33,13 @@ Pizza.prototype.cost = function() {
 
 // User Interface Logic
 $(document).ready(function() {
+  $("#welcomeToSite").submit(function(event) {
+    event.preventDefault();
+
+    $("#pizzaSize").delay(600).show("slide", { direction: "right" }, 850);
+    $("#welcomeToSite").hide("slide", { direction: "left" }, 850);
+  })
+
   $("#pizzaSize").submit(function(event) {
     event.preventDefault();
 
@@ -40,8 +47,8 @@ $(document).ready(function() {
 
     pizzaOne.sizes = sizeInput
     $("#sizeHere").text(pizzaOne.sizes);
-    $("#toppingsOnPizza").delay(700).show("slide", { direction: "right" }, 1000);
-    $("#pizzaSize").hide("slide", { direction: "left" }, 1000);
+    $("#toppingsOnPizza").delay(600).show("slide", { direction: "right" }, 850);
+    $("#pizzaSize").hide("slide", { direction: "left" }, 850);
   });
 
   $("form#toppingsOnPizza").submit(function(event) {
@@ -54,13 +61,12 @@ $(document).ready(function() {
       var addTopping = $(this).val();
       toppingsList.push(addTopping);
       pizzaOne.toppings.push(addTopping);
-      alert(pizzaOne.toppings);
-      // alert(pizzaOne.toppings.length);
-      // alert(pizzaOne.toppings)
       $("#toppingsHere").append("<li>" + addTopping + "</li>");
       pizzaOne.cost();
-      // $('#work-responses').append(workTransportationMode + "<br>"); ---> Maybe for later?
     });
+    if (pizzaOne.toppings.length === 0) {
+      $("#toppingsHere").append("<li>Cheese</li>");
+    }
     $("#review").delay(700).show("slide", { direction: "right" }, 1000);
     $("#toppingsOnPizza").hide("slide", { direction: "left" }, 1000);
   });
