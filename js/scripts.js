@@ -71,4 +71,13 @@ $(document).ready(function() {
     $("#review").delay(700).show("slide", { direction: "right" }, 1000);
     $("#toppingsOnPizza").hide("slide", { direction: "left" }, 1000);
   });
+
+  $("#review").submit(function(event) {
+    event.preventDefault();
+
+    alert("Hope you enjoy your Pizza!");
+
+    $("#welcomeToSite").delay(700).show("slide", { direction: "left" }, 1000);
+    $("#review").hide("slide", { direction: "left" }, 1000);
+  });
 });
