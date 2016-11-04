@@ -3,6 +3,7 @@
   <head>
     <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
     <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative|Marcellus" rel="stylesheet">
     <script src="js/jquery-3.1.1.js"></script>
     <script src="js/jquery-ui-1.9.2.custom.js"></script>
     <script src="js/scripts.js"></script>
@@ -12,31 +13,45 @@
 
     <div class="container" id="welcomeToSite">
       <form>
-        <h1>Welcome to Generic Pizza Place Company!</h1>
-        <h3>You should eat our pizza so we can make money</h3>
-        <button type="submit" name="button" class="btn">Do That Here!</button>
+        <img class="img-responsive left" src="img/borderleft.png" alt="half a wreath" />
+        <img class="img-responsive right" src="img/borderright.png" alt="half a wreath" />
+        <h1>Pilate's Pizza</h1>
+        <h3>Judea's premium pizzaria and court-of-law combo</h3>
+        <button type="submit" name="button" class="btn">Plead your case</button>
       </form>
     </div>
 
     <div class="container" id="pizzaSize"> <!-- Pizza Size (start) -->
       <form id="sizeOfPizza">
-        <div class="radio">
-          <label>
-            <input type="radio" name="size" value="small" checked>
-            Small
-          </label>
-        </div>
-        <div class="radio">
-          <label>
-            <input type="radio" name="size" value="medium">
-            medium
-          </label>
-        </div>
-        <div class="radio">
-          <label>
-            <input type="radio" name="size" value="large">
-            Large
-          </label>
+        <h2>Select Pizza Size:</h2>
+        <div class="row">
+          <div class="col-xs-4">
+            <div class="radio">
+              <label>
+                <input type="radio" name="size" value="small" hidden checked>
+                <img class="img-responsive" src="img/smallpizza.png" alt="large pizza" />
+                <b>Small</b>
+              </label>
+            </div>
+          </div>
+          <div class="col-xs-4">
+            <div class="radio">
+              <label>
+                <input type="radio" name="size" value="medium" hidden>
+                <img class="img-responsive" src="img/mediumpizza.png" alt="medium pizza" />
+                <b>Medium</b>
+              </label>
+            </div>
+          </div>
+          <div class="col-xs-4">
+            <div class="radio">
+              <label>
+                <input type="radio" name="size" value="large" hidden>
+                <img class="img-responsive" src="img/largepizza.png" alt="small pizza" />
+                <b>Large</b>
+              </label>
+            </div>
+          </div>
         </div>
         <button type="submit" name="button" class="btn">Next!</button>
       </form>
@@ -45,20 +60,50 @@
     <div class="container" id="pizzaToppings"> <!-- Pizza Toppings (start) -->
       <form id="toppingsOnPizza">
         <div class="form-group">
-          <h3>Toppings:</h3>
+          <h2>Toppings:</h2>
           <div id="toppings">
-            <input type="checkbox" name="toppings" value="pepperoni">Pepperoni<br>
-            <input type="checkbox" name="toppings" value="olives">Olives<br>
-            <input type="checkbox" name="toppings" value="ham">Ham<br>
-            <input type="checkbox" name="toppings" value="salami">Salami<br>
-            <input type="checkbox" name="toppings" value="beef">Beef<br>
-            <input type="checkbox" name="toppings" value="sausage">Sausage<br>
-            <input type="checkbox" name="toppings" value="bacon">Bacon<br>
-            <input type="checkbox" name="toppings" value="onion">Onion<br>
-            <input type="checkbox" name="toppings" value="peppers">Green Pepper<br>
-            <input type="checkbox" name="toppings" value="spinich">Spinich<br>
-            <input type="checkbox" name="toppings" value="chicken">Chicken<br>
-            <input type="checkbox" name="toppings" value="feta">Feta Cheese<br>
+            <div class="row">
+              <div class="col-xs-3">
+                <input type="checkbox" name="toppings" value="pepperoni"><img class="img-responsive" src="img/pepperoni.png" alt="pepperoni" />Pepperoni<br>
+              </div>
+              <div class="col-xs-3">
+                <input type="checkbox" name="toppings" value="olives"><img class="img-responsive" src="img/olives.png" alt="olives" />Olives<br>
+              </div>
+              <div class="col-xs-3">
+                <input type="checkbox" name="toppings" value="peppers"><img class="img-responsive" src="img/pepper.png" alt="pepper" />Green Peppers<br>
+              </div>
+              <div class="col-xs-3">
+                <input type="checkbox" name="toppings" value="pineapple"><img class="img-responsive" src="img/pineapple.png" alt="pineapple" />Pineapple<br>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-3">
+                <input type="checkbox" name="toppings" value="spinach"><img class="img-responsive" src="img/spinach.png" alt="sspinach" />Spinach<br>
+              </div>
+              <div class="col-xs-3">
+                <input type="checkbox" name="toppings" value="beef"><img class="img-responsive" src="img/beef.png" alt="beef" />Beef<br>
+              </div>
+              <div class="col-xs-3">
+                <input type="checkbox" name="toppings" value="sausage"><img class="img-responsive" src="img/sausage.jpg" alt="sausage" />Sausage<br>
+              </div>
+              <div class="col-xs-3">
+                <input type="checkbox" name="toppings" value="bacon"><img class="img-responsive" src="img/bacon.jpg" alt="bacon" />Bacon<br>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-3">
+                <input type="checkbox" name="toppings" value="onion"><img class="img-responsive" src="img/onion.png" alt="onion" />Onion<br>
+              </div>
+              <div class="col-xs-3">
+                <input type="checkbox" name="toppings" value="ham"><img class="img-responsive" src="img/ham.png" alt="ham" />Ham<br>
+              </div>
+              <div class="col-xs-3">
+                <input type="checkbox" name="toppings" value="salami"><img class="img-responsive" src="img/salami.png" alt="spinach" />Salami<br>
+              </div>
+              <div class="col-xs-3">
+                <input type="checkbox" name="toppings" value="chicken"><img class="img-responsive" src="img/chicken.png" alt="chicken" />Chicken<br>
+              </div>
+            </div>
           </div>
         </div>
         <button type="submit" name="button" class="btn">Let's Review...</button>

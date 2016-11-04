@@ -33,26 +33,33 @@ Pizza.prototype.cost = function() {
 
 // User Interface Logic
 $(document).ready(function() {
-  $("#welcomeToSite").submit(function(event) {
+  $("#welcomeToSite").submit(function(event) {  // ------- Welcome Box
     event.preventDefault();
 
     $("#pizzaSize").delay(600).show("slide", { direction: "right" }, 850);
     $("#welcomeToSite").hide("slide", { direction: "left" }, 850);
   })
 
-  $("#pizzaSize").submit(function(event) {
+  $(".col-xs-4 img").click(function() {
+    $("img").removeClass("chosen");
+    $(this).addClass("chosen");
+
+
+  });
+
+  $("#pizzaSize").submit(function(event) {  // ------ Picking Size of Pizza
     event.preventDefault();
 
     var sizeInput = $("input:radio[name=size]:checked").val();
 
     pizzaOne.sizes = sizeInput
-    $("#sizeHere").text(pizzaOne.sizes);
+    $("#sizeHere").text("-" + pizzaOne.sizes + "-");
     pizzaOne.cost();
     $("#toppingsOnPizza").delay(600).show("slide", { direction: "right" }, 850);
     $("#pizzaSize").hide("slide", { direction: "left" }, 850);
   });
 
-  $("form#toppingsOnPizza").submit(function(event) {
+  $("form#toppingsOnPizza").submit(function(event) { // ----- Picking Toppings
     event.preventDefault();
     $("ul").empty();
     pizzaOne.toppings = [];
@@ -72,7 +79,7 @@ $(document).ready(function() {
     $("#toppingsOnPizza").hide("slide", { direction: "left" }, 1000);
   });
 
-  $("#review").submit(function(event) {
+  $("#review").submit(function(event) { // ------------------ Review of Order
     event.preventDefault();
 
     alert("Hope you enjoy your Pizza!");

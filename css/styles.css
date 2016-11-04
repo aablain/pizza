@@ -6,8 +6,12 @@
 
 }
 
+body {
+  font-family: 'Cinzel Decorative', cursive;
+}
+
 form, #review {
-  width: 500px;
+  width: 800px;
   margin: 0 auto;
   text-align: center;
 }
@@ -17,4 +21,54 @@ form {
 }
  ul {
    list-style: none;
+ }
+
+ .left {
+   float: left;
+ }
+
+ .right {
+   float: right;
+ }
+
+ .left, .right {
+   max-height: 300px;
+ }
+
+ #welcomeToSite h1 {
+   color: #7DCEA0;
+ }
+
+ #welcomeToSite h3 {
+   color: #D7DBDD;
+ }
+
+ .btn {
+   border-radius: 20px 1px;
+   margin-top: 35px;
+   background-color: #D7DBDD;
+   color: #7DCEA0;
+ }
+
+ .btn:hover {
+   color: #D7DBDD;
+   background-color: #7DCEA0;
+ }
+ 
+ .btn:focus, .btn:active:focus, .btn.active:focus {
+    outline: 0 none;
+}
+
+ .chosen {
+   -webkit-filter: drop-shadow(2px 2px 11px #222);
+   filter:         drop-shadow(2px 2px 11px #222);
+ }
+
+ #pizzaToppings h2 {
+   font-weight: bold;
+   margin-bottom: 30px;
+ }
+
+ #pizzaSize h2 {
+   margin-bottom: 45px;
  }
