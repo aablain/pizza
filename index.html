@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
     <link rel="stylesheet" href="css/styles.css" type="text/css">
     <script src="js/jquery-3.1.1.js"></script>
-    <!-- <script src="js/jquery-ui-1.9.2.custom.js"></script> -->
+    <script src="js/jquery-ui-1.9.2.custom.js"></script>
     <script src="js/scripts.js"></script>
     <title>Pizza</title>
   </head>
@@ -14,7 +14,7 @@
       <form id="sizeOfPizza">
         <div class="radio">
           <label>
-            <input type="radio" name="size" value="small">
+            <input type="radio" name="size" value="small" checked>
             Small
           </label>
         </div>
@@ -41,7 +41,7 @@
           <div id="toppings">
             <input type="checkbox" name="toppings" value="pepperoni">Pepperoni<br>
             <input type="checkbox" name="toppings" value="olives">Olives<br>
-            <input type="checkbox" name="toppings" value="ham">Canadian Bacon<br>
+            <input type="checkbox" name="toppings" value="ham">Ham<br>
             <input type="checkbox" name="toppings" value="salami">Salami<br>
             <input type="checkbox" name="toppings" value="beef">Beef<br>
             <input type="checkbox" name="toppings" value="sausage">Sausage<br>
@@ -57,12 +57,13 @@
       </form>
     </div> <!-- Pizza Toppings (end) -->
 
-    <div class="container"> <!-- Order Review (start) -->
+    <div class="container" id="review"> <!-- Order Review (start) -->
       <h1>Your Pizza:</h1>
       <h3><span id="sizeHere"></span></h3>
       <h3><ul id="toppingsHere">
 
       </ul></h3>
+      <h2>Total: <span id="totalCostHere"></span></h2>
       <button type="button" name="button" class="btn">Toss that Pizza in the Oven!</button>
     </div> <!-- Order Review (end) -->
 
