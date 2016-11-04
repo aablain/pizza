@@ -9,8 +9,12 @@
 form, #review {
   width: 500px;
   margin: 0 auto;
+  text-align: center;
 }
 
 form {
   padding: 10%;
 }
+ ul {
+   list-style: none;
+ }
