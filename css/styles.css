@@ -54,7 +54,27 @@ form {
    color: #D7DBDD;
    background-color: #7DCEA0;
  }
- 
+
+ .back {
+   color: #F1948A;
+   background-color: #D7DBDD;
+   border-radius: 1px 20px;
+ }
+
+ .back:hover {
+   color: #D7DBDD;
+   background-color: #F1948A;
+ }
+
+ /*#review .back {
+   margin-top: 5px;
+ }
+
+ #atEnd .back:hover {
+   margin-top: 5px;
+   content: 'Oops!';
+ }*/
+
  .btn:focus, .btn:active:focus, .btn.active:focus {
     outline: 0 none;
 }

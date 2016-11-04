@@ -1,6 +1,4 @@
 // Business End
-var toppingsList = [];
-
 var Pizza = function(size, toppings) {
   this.sizes = size
   this.toppings = toppings
@@ -23,10 +21,7 @@ Pizza.prototype.cost = function() {
     $("#totalCostHere").text((sizeCost + (pizzaOne.toppings.length  * 1.75)).toFixed(2));
     return sizeCost;
   }
-  // if (pizzaOne.toppings.length > 0) {
-  //   var hereWe = 2;
-  //   return hereWe;
-  // }
+
 }
 
 
@@ -43,9 +38,12 @@ $(document).ready(function() {
   $(".col-xs-4 img").click(function() {
     $("img").removeClass("chosen");
     $(this).addClass("chosen");
-
-
   });
+
+  // $("#atEnd .btn").click(function() {  -------------- Possible Back Button? (start)
+  //   $("#toppingsOnPizza").delay(700).show("slide", { direction: "left" }, 1000);
+  //   $("#review").hide("slide", { direction: "right" }, 1000);
+  // });                                  ----------------- Possible Back Button (end)
 
   $("#pizzaSize").submit(function(event) {  // ------ Picking Size of Pizza
     event.preventDefault();
@@ -55,25 +53,26 @@ $(document).ready(function() {
     pizzaOne.sizes = sizeInput
     $("#sizeHere").text("-" + pizzaOne.sizes + "-");
     pizzaOne.cost();
+    $(".col-xs-3 input").prop("checked", false);
     $("#toppingsOnPizza").delay(600).show("slide", { direction: "right" }, 850);
     $("#pizzaSize").hide("slide", { direction: "left" }, 850);
   });
 
   $("form#toppingsOnPizza").submit(function(event) { // ----- Picking Toppings
     event.preventDefault();
-    $("ul").empty();
+    $("#toppingsHere").empty();
     pizzaOne.toppings = [];
 
 
     $("input:checkbox[name=toppings]:checked").each(function(){
       var addTopping = $(this).val();
-      toppingsList.push(addTopping);
       pizzaOne.toppings.push(addTopping);
       $("#toppingsHere").append(addTopping + "<br>");
       pizzaOne.cost();
     });
     if (pizzaOne.toppings.length === 0) {
       $("#toppingsHere").append("Cheese");
+      pizzaOne.cost();
     }
     $("#review").delay(700).show("slide", { direction: "right" }, 1000);
     $("#toppingsOnPizza").hide("slide", { direction: "left" }, 1000);
